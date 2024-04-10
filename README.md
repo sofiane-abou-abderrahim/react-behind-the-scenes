@@ -29,3 +29,8 @@
 2. define a new `handleSetCount` function in `App.jsx` to pass the information whether the user clicked on the set button from ``ConfigureCounter.jsx`
 3. output the `<ConfigureCounter>` component in `App.jsx`
 4. you could consider removing `memo` from `Counter.jsx` because now it doesn't make much sense anymore
+
+## 3. Understanding the useCallback() Hook
+
+1. wrap the `IconButton.jsx` component function with the `memo` function
+2. use the `useCallback` hook in `Counter.jsx` in conjunction with `memo` to avoid unnecessary re‐executions
