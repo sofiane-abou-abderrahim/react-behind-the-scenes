@@ -18,9 +18,9 @@
 ## 1. Avoiding Component Function Executions with memo()
 
 1. wrap the `Counter.jsx` component function with the `memo` function imported from React
-   => `memo` only prevents function executions that are triggered by the parent component, so in this case the `App.jsx` component
-   => `memo` does not care about internal changes
-   => But external changes of course only makes sense for this component here to be executed if the prop value changed
+   1. `memo` only prevents function executions that are triggered by the parent component, so in this case the `App.jsx` component
+   2. `memo` does not care about internal changes
+   3. But external changes of course only makes sense for this component here to be executed if the prop value changed
 2. Don't overuse `memo` because checking props with `memo` costs performance
 
 ## 2. Avoiding Component Function Executions with Clever Structuring
@@ -34,3 +34,9 @@
 
 1. wrap the `IconButton.jsx` component function with the `memo` function
 2. use the `useCallback` hook in `Counter.jsx` in conjunction with `memo` to avoid unnecessary re‐executions
+
+## 4. Understanding the useMemo() Hook
+
+1. use the `useMemo` hook in `Counter.jsx` by wrapping the `isPrime` function
+   1. this hook prevents the execution of normal functions that are called inside of component functions, unless their input changed
+2. don't overuse `useMemo()`
