@@ -22,3 +22,10 @@
    => `memo` does not care about internal changes
    => But external changes of course only makes sense for this component here to be executed if the prop value changed
 2. Don't overuse `memo` because checking props with `memo` costs performance
+
+## 2. Avoiding Component Function Executions with Clever Structuring
+
+1. create a new `ConfigureCounter.jsx` component
+2. define a new `handleSetCount` function in `App.jsx` to pass the information whether the user clicked on the set button from ``ConfigureCounter.jsx`
+3. output the `<ConfigureCounter>` component in `App.jsx`
+4. you could consider removing `memo` from `Counter.jsx` because now it doesn't make much sense anymore
