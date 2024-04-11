@@ -47,3 +47,8 @@
 2. output the `<CounterHistory>` component in `Counter.jsx`
 3. change the logic in `Counter.jsx` so that you have an `id` that does belong to a concrete change object
 4. in `CounterHistory.jsx`, use a `key` value that is strictly connected to a specific value to prevent the state from jumping across component instances
+
+## 6. Using Keys For Resetting Components
+
+1. use `useEffect` as a solution for resetting the `initialCount` in `Counter.jsx`
+2. use a `key` prop on the `<Counter>` component in `App.jsx` instead of `useEffect` as it's a better way of forcing a component functional reset
