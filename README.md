@@ -40,3 +40,10 @@
 1. use the `useMemo` hook in `Counter.jsx` by wrapping the `isPrime` function
    1. this hook prevents the execution of normal functions that are called inside of component functions, unless their input changed
 2. don't overuse `useMemo()`
+
+## 5. Why Keys Matter When Managing State!
+
+1. update `Counter.jsx`
+2. output the `<CounterHistory>` component in `Counter.jsx`
+3. change the logic in `Counter.jsx` so that you have an `id` that does belong to a concrete change object
+4. in `CounterHistory.jsx`, use a `key` value that is strictly connected to a specific value to prevent the state from jumping across component instances
