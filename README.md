@@ -52,3 +52,10 @@
 
 1. use `useEffect` as a solution for resetting the `initialCount` in `Counter.jsx`
 2. use a `key` prop on the `<Counter>` component in `App.jsx` instead of `useEffect` as it's a better way of forcing a component functional reset
+
+## 7. State Scheduling & Batching
+
+1. log the `chosenCount` state inside the `handleSetCount` function in `App.jsx` to find out how states are scheduled
+2. try to updated the `chosenCount` like this `setChosenCount(chosenCount + 1);` to see that it will get a strange result
+3. update the `chosenCount` state with the function form where you get the `prevChosenCount` to get the `newCount` + 1
+4. React performs state batching, which simply means that multiple state updates that are triggered from the same function, for example, are batched together and will only lead to one component function execution
