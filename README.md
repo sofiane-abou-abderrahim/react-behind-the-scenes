@@ -59,3 +59,8 @@
 2. try to updated the `chosenCount` like this `setChosenCount(chosenCount + 1);` to see that it will get a strange result
 3. update the `chosenCount` state with the function form where you get the `prevChosenCount` to get the `newCount` + 1
 4. React performs state batching, which simply means that multiple state updates that are triggered from the same function, for example, are batched together and will only lead to one component function execution
+
+## 8. Optimizing React with MillionJS
+
+1. run `npm install million`
+2. update `vite.config.js`
